@@ -13,9 +13,14 @@
         </div>
         <input type="text" id="display" disabled>
         <div class="buttons">
+            <button onclick="appendToDisplay('%')">%</button>
+            <button onclick="clearEntry()">CE</button>
             <button onclick="clearDisplay()">C</button>
-            <button onclick="appendToDisplay('(')">(</button>
-            <button onclick="appendToDisplay(')')">)</button>
+            <button onclick="deleteLast()">⌫</button>
+            
+            <button onclick="calculateReciprocal()">1/x</button>
+            <button onclick="square()">x²</button>
+            <button onclick="squareRoot()">²√x</button>
             <button onclick="appendToDisplay('/')">/</button>
 
             <button onclick="appendToDisplay('7')">7</button>
@@ -33,6 +38,7 @@
             <button onclick="appendToDisplay('3')">3</button>
             <button onclick="appendToDisplay('+')">+</button>
 
+            <button onclick="toggleSign()">+/-</button>
             <button onclick="appendToDisplay('0')">0</button>
             <button onclick="appendToDisplay('.')">.</button>
             <button onclick="calculate()">=</button>
