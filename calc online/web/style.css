@@ -99,3 +99,33 @@ body.dark-mode {
     --display-bg: #1e1e1e;
     --border-color: #444;
 }
+
+body.banan-mode {
+    --bg-color: #fbec5d;
+    --text-color: #ffffff;
+    --button-bg: #eed365;
+    --button-hover: #d0b339;
+    --button-active: #74370d;
+    --display-bg: #421603;
+    --border-color: #444;
+}
+
+body.strawb-mode {
+    --bg-color: #ae1313;
+    --text-color: #ffffff;
+    --button-bg: #df3e3e;
+    --button-hover: #f27c7c;
+    --button-active: #5e8121;
+    --display-bg: #87b228;
+    --border-color: #444;
+}
+
+body.avocad-mode {
+    --bg-color: #74d533;
+    --text-color: #ffffff;
+    --button-bg: #86d83b;
+    --button-hover: #99dc44;
+    --button-active: #bde354;
+    --display-bg: #d9e861;
+    --border-color: #444;
+}
