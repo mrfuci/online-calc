@@ -1,8 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
+const http = require('http');
+const { Server } = require('socket.io');
 
 const app = express();
+const server = http.createServer(app); // HTTP server pro Express a Socket.IO
+const io = new Server(server); // Socket.IO server
 const PORT = 3000;
 
 // Cesta k JSON souboru
@@ -39,16 +43,19 @@ app.post('/log-click', (req, res) => {
     // Uložíme aktualizovaná data zpět do souboru
     saveClicks(clicks);
 
+    // Odesíláme aktuální statistiky všem klientům přes WebSocket
+    io.emit('stats-update', clicks);
+
     res.status(200).send('Button click logged');
 });
 
-// API pro získání statistik
+// Endpoint pro získání statistik (pro prvotní načtení)
 app.get('/stats', (req, res) => {
     const clicks = loadClicks(); // Načteme data ze souboru
     res.status(200).json(clicks);
 });
 
 // Spuštění serveru
-app.listen(PORT, () => {
+server.listen(PORT, () => {
     console.log(`Server běží na http://localhost:${PORT}`);
 });
