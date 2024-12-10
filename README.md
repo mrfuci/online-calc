@@ -2,6 +2,7 @@
 Kalkulačka ale online
 
 Opravdu skvělá kalkulačka v prohlížeci se 4 nádhernémy módy.
+
 -První mód je všemi oblíbený Dark Mod
 
 -Dalsím módem je Banana Mode pro všechny kamarády Pedra
